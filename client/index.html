@@ -9,23 +9,10 @@
     <!-- Bootstrap -->
     <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/dashboard.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,900italic' rel='stylesheet' type='text/css'>
 
   </head>
   <body ng-app="myApp">
-      <div class="navbar navbar-inverse navbar-fixed-top mainNav" role="navigation">
-        <div class="container-fluid">
-          <div class="row col-sm-12 col-md-12" >
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#"><span id="Brand">Hacker News Dashboard</span></a>
-            </div>
-            <div class="navbar-collapse collapse">
-              <ul class="nav navbar-nav navbar-right">
-                <li class='subNav'><a class='navLink' href="#">Login</a></li>
-                <li class='subNav'><a class='navLink fork' href="https://github.com/Scheming-Lion/Scheming-Lion"><strong>Fork It!<strong></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- START OF THE BODY -->
@@ -34,11 +21,12 @@
         <div class="row" ng-controller="mainController">
           <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-              <li><a ng-click="chooseView('home')" href="#">Home</a></li>
-            <li><a ng-click="chooseView('search')" href="#">Search User Stories</a></li>
-            <li><a ng-click="chooseView('top100visual')" href="#">Current Trending Words</a></li>
-            <li><a ng-click="chooseView('trackUser')" href="#">Track User</a></li>
-            <li><a ng-click="chooseView('trackPost')" href="#">Track Post</a></li>
+              <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="search">Search User Stories</a></li>
+            <li><a ui-sref="top100visual">Current Trending Words</a></li>
+            <li><a ui-sref="trackUser">Track User</a></li>
+            <li><a ui-sref="trackPost">Track Post</a></li>
+            <li><a ui-sref="monthvisual">Month</a></li>
             </ul>
           </div>
           <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -63,12 +51,14 @@
     <!--<script type="text/javascript" src="app/topStories.js"></script>-->
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="main/main.js"></script>
-    <script type="text/javascript" src="top100visual/top100visual.js"></script>
     <script type="text/javascript" src="app/d3-angular.js"></script>
     <script type="text/javascript" src="app/directives.js"></script>
+    <script type="text/javascript" src="app/directivegraph.js"></script>
+    <script type="text/javascript" src="top100visual/top100visual.js"></script>
     <script type="text/javascript" src="search/search.js"></script>
     <script type="text/javascript" src="trackUser/trackUser.js"></script>
     <script type="text/javascript" src="trackPost/trackPost.js"></script>
     <script type="text/javascript" src="home/home.js"></script>
+    <script type="text/javascript" src="monthvisual/month.js"></script>
   </body>
 </html>
